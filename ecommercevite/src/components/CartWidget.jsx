@@ -1,4 +1,4 @@
-import bonsai from 'react.svg'
+import celular from 'react.svg'
 export const CartWidget = () => {
-    return <div>Nashe</div>
+    return <div>1</div>
 }
