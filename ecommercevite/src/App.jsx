@@ -15,9 +15,9 @@ function App() {
   return (
   <>
   <header>
-    <h1>La mejor calidad</h1>
+    <h1>La mejor calidad 😎</h1>
     <BrowserRouter>
-      <Navbar />
+      <NavBar />
       <Routes>
         <Route path='/' element= {<Inicio/>} />
         <Route path='/Ayuda' element= {<Ayuda/>} />

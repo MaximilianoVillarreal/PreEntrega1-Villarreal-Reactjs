@@ -23,7 +23,7 @@ export const Inicio = () => {
 
 	return (
 		<Container>
-			<h1>Inicio</h1>
+			<h1>Inicio 🎉</h1>
 			<Link to="/Ayuda">
 				<button>Dirigirse a "Ayuda"</button>
 			</Link>
