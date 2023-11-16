@@ -9,14 +9,14 @@
 	{
 		"name": "S23 Ultra",
 		"id": 2,
-		"category": "Samsung",
+		"category": "Celular",
 		"detail": "Samsung S23 Ultra, lo último en tecnología.",
 		"img": "https://beneficios.tiendadiggit.com.ar/web/image/product.image/2343/image_1024/Celular%20Samsung%20Galaxy%20S23%20Ultra?unique=25878cf"
 	},
 	{
 		"name": "Moto G100",
 		"id": 3,
-		"category": "Motorola",
+		"category": "Celular",
 		"detail": "Motorola Moto G100, increíble rendimiento.",
 		"img": "https://ferbi.com.ar/web/image/product.image/2787/image_1024/Celular%20Motorola%20Moto%20G100%20Reacondicionado?unique=eb065d4"
 	}
