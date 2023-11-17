@@ -3,10 +3,10 @@ import { useEffect, useState } from "react"
 import { Container } from "react-bootstrap/Container";
 
 import {productos} from "../data/productos.json"
-import { ItemList } from "./ItemList";
 
-export const ItemListContainer = (props) => {
-    const [items, setItems] = useState ([]);
+
+export const ItemDetailContainer = () => {
+    const [item, setItem] = useState (null);
 
     const {id} = useParams();
 
@@ -15,19 +15,12 @@ export const ItemListContainer = (props) => {
             setTimeout(() =>{resolve(productos)}, 2000)
         });
         mypromise.then((response) => {
-            if(!id) {
-                setItems(response)
-            } else {
-                const filterByCategory = response.filter(item => item.category === id
-                ); setItems(filterByCategory)
-            }
+                const findById = response.find(item => item.id === id
+                ); setItem(findById)
             });
     }, [id])
 
-    return(
-    <Container className= "mt-4">
-        <div>{props.greeting}</div>
-        <ItemList items={items} />
+    return <Container className= "mt-4">
+        {JSON.stringify(item)}
     </Container>
-    )
 }
