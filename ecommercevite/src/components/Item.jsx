@@ -9,7 +9,7 @@ export const Item = ({item}) => {
             <Card.Body>
             <Card.Title>{item.name}</Card.Title>
             <Card.Text>{item.detail}</Card.Text>
-            <Link to={`/item/${item.id}`}><Button variant="primary">Go somewhere</Button></Link>
+            <Link to={`/items/${item.id}`}><Button variant="primary">Go somewhere</Button></Link>
             </Card.Body>
         </Card>
         );
