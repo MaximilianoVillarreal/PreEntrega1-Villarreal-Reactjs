@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react"
-import { Container } from "react-bootstrap/Container";
+import { Container } from "react-bootstrap";
 
-import {productos} from "../data/productos.json"
+import {productos} from "../data/productos.js"
 import { ItemList } from "./ItemList";
 
 export const ItemListContainer = (props) => {

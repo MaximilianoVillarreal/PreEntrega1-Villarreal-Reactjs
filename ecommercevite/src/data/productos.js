@@ -1,4 +1,4 @@
-[
+export const productos = [
 	{
 		"name": "Iphone 11 pro",
 		"id": "1",

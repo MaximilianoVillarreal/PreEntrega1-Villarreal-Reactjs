@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react"
-import { Container } from "react-bootstrap/Container";
+import { Container } from "react-bootstrap";
 
 import { ItemDetail } from "./ItemDetail";
-import {productos} from "../data/productos.json"
+import {productos} from "../data/productos.js"
 
 
 export const ItemDetailContainer = () => {
