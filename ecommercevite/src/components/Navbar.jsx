@@ -7,10 +7,10 @@ import { CartWidget } from "./CartWidget";
 
 export const NavBar = () => {
     return (
-    <Navbar>
+    <Navbar bg='dark' data-bs-theme='dark'>
         <Container>
-        	<Navbar.Brand>
-            <NavLink to="/" className="logo">ECommerce</NavLink>
+        <Navbar.Brand>
+            <NavLink to="/">Inicio</NavLink>
         </Navbar.Brand>
         <Nav className="me-auto navbar-links">
             <NavLink to="category/Celular">Celular</NavLink>

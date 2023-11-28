@@ -1,8 +1,8 @@
-import { useParams } from "react-router-dom";
+import { Form, useParams } from "react-router-dom";
 import { useEffect, useState } from "react"
 import { Container } from "react-bootstrap";
+import { getFirestore, collection, getDocs, query, where} from "firebase/firestore"
 
-import {productos} from "../data/productos.js"
 import { ItemList } from "./ItemList";
 
 export const ItemListContainer = (props) => {
@@ -10,19 +10,23 @@ export const ItemListContainer = (props) => {
 
     const {id} = useParams();
 
-    useEffect(() => {
-        const mypromise = new Promise((resolve, reject) => {
-            setTimeout(() =>{resolve(productos)}, 2000)
-        });
-        mypromise.then((response) => {
-            if(!id) {
-                setItems(response)
-            } else {
-                const filterByCategory = response.filter(item => item.category === id
-                ); setItems(filterByCategory)
-            }
-            });
-    }, [id])
+useEffect (() => {
+    const db = getFirestore();
+
+    const refCollection = !id
+    ? collection(db, "items")
+    :query(collection(db, "items"), where("categoryId", "==", id))
+
+    getDocs(refCollection).then((snapshot) => {
+        if (snapshot.size === 0) console.log("No hay resultados");
+        else
+            setItems(
+                snapshot.docs.map((doc) => {
+                    return { id: doc.id, ...doc.data()};
+                })
+            );
+    });
+}, [id]);
 
     return(
     <Container className= "mt-4">
