@@ -8,10 +8,28 @@ export const CartProvider = ({children}) => {
 
     const clear = () => setItems ([])
 
-    const onAdd = (item) =>
-        setItems ((prev) => {
-            return [...prev, item]
-    })
+    const onAdd = (item, quantity) => {
+        const existe = items.some((i) => i.id === item.id);
+        if (existe){
+            const actualizarItems = items.map(i =>{
+                if(i.id === item.id) {
+                    return{
+                        ...i,
+                        quantity: i.quantity + quantity,
+                    }
+                } else {
+                    return
+                        i
+                }
+            })
+            setItems(actualizarItems)
+        }
+        else{
+            setItems ((prev) => {
+                return [...prev, {...item, quantity}]
+        })
+        }
+}
 
     const onRemove = (id) => {
         const filterItems = items.filter(item => item.id !== id)
