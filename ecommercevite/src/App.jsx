@@ -6,7 +6,7 @@ import './App.css'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 // import 'bootstrap/dist/css/bootstrap.min.css';
-import { NavBar } from "./components/NavBar"
+import { NavBar } from './components/Navbar';
 import { ItemListContainer } from './components/ItemListContainer'
 import { Error404 } from './components/Error404'
 import { ItemDetailContainer } from './components/ItemDetailContainer'

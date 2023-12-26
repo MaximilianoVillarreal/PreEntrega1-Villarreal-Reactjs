@@ -4,7 +4,8 @@ import { useContext } from 'react'
 import { CartContext } from '../contexts/CartContext'
 
 export const CartWidget = () => {
-    const {items} =useContext(CartContext)
+    const contextValue =useContext(CartContext)
+    const { items } = contextValue || { items: [] };
 
     const total = items.reduce (
         (acumulador, valorActual) => acumulador + valorActual.quantity, 0

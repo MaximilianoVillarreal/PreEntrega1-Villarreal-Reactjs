@@ -4,7 +4,8 @@ import { ItemCounter } from "./ItemCounter"
 import { CartContext } from "../contexts/CartContext"
 
 export const ItemDetail = ({item}) => {
-    const {onAdd} = useContext(CartContext)
+    const contextValue = useContext(CartContext);
+    const {onAdd} = contextValue || { onAdd: () => {} };
 
     const add = (quantity) => {
         onAdd(item, quantity)
