@@ -10,6 +10,7 @@ import { NavBar } from './components/Navbar';
 import { ItemListContainer } from './components/ItemListContainer'
 import { Error404 } from './components/Error404'
 import { ItemDetailContainer } from './components/ItemDetailContainer'
+import { Cart } from './components/Cart';
 
 
 function App() {

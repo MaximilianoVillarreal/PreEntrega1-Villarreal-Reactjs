@@ -22,7 +22,7 @@ export const ItemDetailContainer = () => {
 
     return ( 
     <Container className= "mt-4">
-            {item ? <ItemDetail item={item}/> : <>Cargando...</>}
-        </Container>
+            {item ? (<ItemDetail item={item} />) : (<div>No se encontró el ítem</div>)}
+    </Container>
     )
 }

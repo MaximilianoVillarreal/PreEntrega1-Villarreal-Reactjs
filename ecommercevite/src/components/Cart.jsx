@@ -46,8 +46,8 @@ export const Cart = () => {
             });
     }
 
-    if (!items.lenght){
-        return <Container className="mt-4"><h2>Realiza un pedido</h2><button onClick={() => Navigate("/")}>Volver al Inicio</button></Container>
+    if (!items.length){
+        return <Container className="mt-4"><h2>Realiza un pedido</h2><button onClick={() => navigate("/")}>Volver al Inicio</button></Container>
     }
 
     return(
@@ -90,11 +90,11 @@ export const Cart = () => {
 
         <Form.Group className="mb-3" >
             <Form.Label>Nombre</Form.Label>
-            <Form.Control type="text" value={buyer.name} onChange={handleChange} name="nombre" required/>
+            <Form.Control type="text" value={buyer.name} onChange={handleChange} name="name" required/>
         </Form.Group>
         <Form.Group className="mb-3" >
             <Form.Label>Teléfono</Form.Label>
-            <Form.Control type="text"  value={buyer.phone} onChange={handleChange} name="telefono" required/>
+            <Form.Control type="text"  value={buyer.phone} onChange={handleChange} name="phone" required/>
         </Form.Group>
         <Button variant="primary" type="submit" onClick={sendOrder} >
             Enviar
